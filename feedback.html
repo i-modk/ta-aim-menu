@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الشكاوى والاقتراحات || عربة طعيم</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="ta'aim.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="brand">
+                <img src="taaim-logo.jpg" alt="شعار عربة طعيم" class="nav-logo">
+                <span class="brand-name">عربة طعيم</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html#menu">المنيو</a></li>
+                <li><a href="feedback.html" class="active-link">الشكاوى والاقتراحات</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="feedback-container">
+        <div class="feedback-card">
+            <h2>صوتك يهمنا 💬</h2>
+            <p class="feedback-desc">نسعى دائماً لتقديم أفضل جودة وتجربة لكم. شاركنا رأيك، اقتراحك، أو أي ملاحظة وسنكون سعداء بسماعها ومعالجتها فوراً.</p>
+
+            <form class="feedback-form" onsubmit="sendFeedback(event)">
+                <div class="form-group">
+                    <label for="name">الاسم الكريم:</label>
+                    <input type="text" id="name" placeholder="أدخل اسمك" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="type">نوع الرسالة:</label>
+                    <select id="type">
+                        <option value="اقتراح لتحسين الخدمة">اقتراح لتحسين الخدمة</option>
+                        <option value="شكوى بخصوص طلب أو توصيل">شكوى بخصوص طلب أو توصيل</option>
+                        <option value="رأي عام وتقييم">رأي عام وتقييم</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">نص الرسالة أو الاقتراح:</label>
+                    <textarea id="message" rows="4" placeholder="اكتب تفاصيل ملاحظتك أو اقتراحك هنا..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit">إرسال الملاحظة مباشرة عبر واتساب للإدارة 🚀</button>
+            </form>
+
+            <a href="index.html" class="back-link">← العودة إلى الصفحة الرئيسية والمنيو</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2026 عربة طعيم || جميع الحقوق محفوظة</p>
+        <p class="dev-credits">
+            تصميم وتطوير: <a href="https://i-modk.github.io/my-website/" target="_blank">imodk</a>
+        </p>
+    </footer>
+
+    <script>
+        function sendFeedback(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const type = document.getElementById('type').value;
+            const message = document.getElementById('message').value;
+
+            const text = `مرحباً إدارة طعيم،\nلدي (${type})\nالاسم: ${name}\nالملاحظة:\n${message}`;
+            const whatsappUrl = `https://wa.me/967773941294?text=${encodeURIComponent(text)}`;
+            
+            window.open(whatsappUrl, '_blank');
+        }
+    </script>
+</body>
+</html>
