@@ -384,3 +384,52 @@ footer {
     z-index: 100;
     white-space: nowrap;
 }
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links li {
+    display: inline-block;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 7px 14px;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    display: inline-block;
+    white-space: nowrap;
+    transition: all 0.2s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active-link {
+    background-color: #d9232d;
+    border-color: #d9232d;
+    color: #ffffff;
+    box-shadow: 0 2px 8px rgba(217, 35, 45, 0.35);
+}
+@media (max-width: 480px) {
+    .nav-container {
+        padding: 8px 10px;
+    }
+    
+    .nav-links {
+        gap: 6px;
+    }
+
+    .nav-links a {
+        font-size: 11.5px;
+        padding: 6px 10px;
+    }
+}
