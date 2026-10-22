@@ -6,16 +6,16 @@
 
 body {
     font-family: 'Cairo', sans-serif;
-    background-color: #121212;
-    color: #f5f5f5;
+    background-color: #12141a;
+    color: #f1f5f9;
     line-height: 1.6;
     padding-bottom: 70px;
     scroll-behavior: smooth;
 }
 
 .navbar {
-    background-color: #1c1c1c;
-    border-bottom: 1px solid #2d2d2d;
+    background-color: #1a1e27;
+    border-bottom: 1.5px solid #262c3a;
     position: sticky;
     top: 0;
     z-index: 100;
@@ -41,41 +41,57 @@ body {
     height: 38px;
     border-radius: 50%;
     object-fit: cover;
-    border: 1.5px solid #d9232d;
+    border: 1.5px solid #ff5722;
 }
 
 .brand-name {
-    font-size: 16px;
+    font-size: 17px;
     font-weight: 800;
     color: #ffffff;
+    letter-spacing: 0.5px;
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 15px;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links li {
+    display: inline-block;
 }
 
 .nav-links a {
     text-decoration: none;
-    color: #b0b0b0;
+    color: #cbd5e1;
+    font-size: 13px;
     font-weight: 700;
-    font-size: 13.5px;
-    padding: 6px 12px;
-    border-radius: 6px;
+    padding: 7px 14px;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: inline-block;
+    white-space: nowrap;
     transition: all 0.2s ease;
 }
 
-.nav-links a:hover, .nav-links a.active-link {
+.nav-links a:hover,
+.nav-links a.active-link {
+    background-color: #ff5722;
+    border-color: #ff5722;
     color: #ffffff;
-    background-color: #d9232d;
+    box-shadow: 0 2px 10px rgba(255, 87, 34, 0.4);
 }
 
 .header {
     text-align: center;
     padding: 35px 20px 25px 20px;
-    background: radial-gradient(circle, #2d0b0d 0%, #121212 100%);
-    border-bottom: 1px solid #2a1516;
+    background: radial-gradient(circle, #242a38 0%, #12141a 100%);
+    border-bottom: 1px solid #232938;
 }
 
 .logo-box {
@@ -84,8 +100,9 @@ body {
     margin: 0 auto 15px auto;
     border-radius: 50%;
     overflow: hidden;
-    border: 3px solid #d9232d;
-    box-shadow: 0 0 20px rgba(217, 35, 45, 0.4);
+    border: 3px solid #ff5722;
+    box-shadow: 0 0 25px rgba(255, 87, 34, 0.35);
+    background-color: #1a1e27;
 }
 
 .logo {
@@ -102,7 +119,7 @@ body {
 }
 
 .slogan {
-    color: #ffb830;
+    color: #f5af42;
     font-size: 15px;
     font-weight: 700;
     margin-bottom: 15px;
@@ -116,12 +133,12 @@ body {
 }
 
 .badge {
-    background: rgba(255, 255, 255, 0.08);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    padding: 4px 10px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    padding: 5px 12px;
     border-radius: 20px;
     font-size: 12px;
-    color: #e0e0e0;
+    color: #e2e8f0;
 }
 
 .menu-container {
@@ -139,14 +156,14 @@ body {
 
 .menu-subtitle {
     text-align: center;
-    color: #9e9e9e;
+    color: #94a3b8;
     font-size: 13.5px;
     margin-bottom: 25px;
 }
 
 .food-card {
-    background-color: #1c1c1c;
-    border: 1px solid #2d2d2d;
+    background-color: #1a1e27;
+    border: 1px solid #262c3a;
     border-radius: 14px;
     padding: 18px;
     margin-bottom: 16px;
@@ -156,24 +173,25 @@ body {
 
 .food-card:hover {
     transform: translateY(-2px);
-    border-color: #d9232d;
+    border-color: #ff5722;
 }
 
 .food-card.featured {
-    border: 1.5px solid #d9232d;
-    background: linear-gradient(180deg, #241415 0%, #1c1c1c 100%);
+    border: 1.5px solid #ff5722;
+    background: linear-gradient(180deg, #212634 0%, #1a1e27 100%);
 }
 
 .card-badge {
     position: absolute;
     top: -10px;
     left: 15px;
-    background-color: #d9232d;
+    background-color: #ff5722;
     color: #ffffff;
     font-size: 11px;
     font-weight: bold;
     padding: 3px 10px;
     border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(255, 87, 34, 0.4);
 }
 
 .food-header {
@@ -190,17 +208,18 @@ body {
 }
 
 .price {
-    color: #ffb830;
+    color: #f5af42;
     font-weight: 800;
     font-size: 15px;
-    background: rgba(255, 184, 48, 0.1);
-    padding: 2px 8px;
+    background: rgba(245, 175, 66, 0.12);
+    padding: 3px 10px;
     border-radius: 6px;
+    border: 1px solid rgba(245, 175, 66, 0.2);
 }
 
 .food-info p {
     font-size: 13px;
-    color: #b0b0b0;
+    color: #94a3b8;
     margin-bottom: 15px;
 }
 
@@ -222,11 +241,12 @@ body {
     font-weight: 700;
     padding: 8px 16px;
     border-radius: 8px;
-    transition: background 0.2s;
+    transition: background 0.2s ease, transform 0.15s ease;
 }
 
 .btn-order:hover {
     background-color: #1ebd5b;
+    transform: translateY(-2px);
 }
 
 .feedback-container {
@@ -236,8 +256,8 @@ body {
 }
 
 .feedback-card {
-    background-color: #1c1c1c;
-    border: 1px solid #2d2d2d;
+    background-color: #1a1e27;
+    border: 1px solid #262c3a;
     border-radius: 14px;
     padding: 25px;
 }
@@ -251,7 +271,7 @@ body {
 }
 
 .feedback-desc {
-    color: #a0a0a0;
+    color: #94a3b8;
     font-size: 13.5px;
     text-align: center;
     margin-bottom: 25px;
@@ -265,7 +285,7 @@ body {
     display: block;
     margin-bottom: 6px;
     font-size: 13.5px;
-    color: #e0e0e0;
+    color: #e2e8f0;
     font-weight: 600;
 }
 
@@ -273,8 +293,8 @@ body {
     width: 100%;
     padding: 10px 14px;
     border-radius: 8px;
-    background-color: #262626;
-    border: 1px solid #3d3d3d;
+    background-color: #12141a;
+    border: 1px solid #333a4d;
     color: #ffffff;
     font-family: inherit;
     font-size: 13.5px;
@@ -283,12 +303,12 @@ body {
 }
 
 .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
-    border-color: #d9232d;
+    border-color: #ff5722;
 }
 
 .btn-submit {
     width: 100%;
-    background-color: #d9232d;
+    background-color: #ff5722;
     color: #ffffff;
     border: none;
     padding: 12px;
@@ -297,19 +317,19 @@ body {
     font-weight: 800;
     cursor: pointer;
     font-family: inherit;
-    transition: background 0.2s;
+    transition: background 0.2s ease;
     margin-top: 10px;
 }
 
 .btn-submit:hover {
-    background-color: #b51c24;
+    background-color: #e64a19;
 }
 
 .back-link {
     display: block;
     text-align: center;
     margin-top: 20px;
-    color: #ffb830;
+    color: #f5af42;
     text-decoration: none;
     font-size: 13px;
     font-weight: 600;
@@ -318,46 +338,40 @@ body {
 .timing-section {
     max-width: 600px;
     margin: 40px auto 20px auto;
-    background: #181818;
+    background: #1a1e27;
     padding: 20px;
     border-radius: 12px;
     text-align: center;
-    border: 1px dashed #333333;
+    border: 1px dashed #333a4d;
 }
 
 .timing-section h3 {
-    color: #d9232d;
+    color: #ff5722;
     font-size: 16px;
     margin-bottom: 8px;
 }
 
 .timing-section p {
     font-size: 13px;
-    color: #cccccc;
+    color: #cbd5e1;
     margin-bottom: 4px;
-}
-
-.location-txt {
-    color: #ffb830 !important;
-    font-weight: bold;
-    margin-top: 8px;
 }
 
 footer {
     text-align: center;
     font-size: 12px;
-    color: #666;
+    color: #64748b;
     margin-top: 30px;
 }
 
 .dev-credits {
     margin-top: 6px;
     font-size: 11.5px;
-    color: #888888;
+    color: #94a3b8;
 }
 
 .dev-credits a {
-    color: #ffb830;
+    color: #f5af42;
     text-decoration: none;
     font-weight: 700;
     transition: color 0.2s ease;
@@ -384,41 +398,7 @@ footer {
     z-index: 100;
     white-space: nowrap;
 }
-.nav-links {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    padding: 0;
-    margin: 0;
-}
 
-.nav-links li {
-    display: inline-block;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: #ffffff;
-    font-size: 13px;
-    font-weight: 700;
-    padding: 7px 14px;
-    border-radius: 20px;
-    background-color: rgba(255, 255, 255, 0.08);
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    display: inline-block;
-    white-space: nowrap;
-    transition: all 0.2s ease;
-}
-
-.nav-links a:hover,
-.nav-links a.active-link {
-    background-color: #d9232d;
-    border-color: #d9232d;
-    color: #ffffff;
-    box-shadow: 0 2px 8px rgba(217, 35, 45, 0.35);
-}
 @media (max-width: 480px) {
     .nav-container {
         padding: 8px 10px;
